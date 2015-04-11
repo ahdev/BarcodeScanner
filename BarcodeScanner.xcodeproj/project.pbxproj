@@ -13,6 +13,7 @@
 		A06C89951ABA30DF00751EC8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A06C89941ABA30DF00751EC8 /* Images.xcassets */; };
 		A06C89981ABA30DF00751EC8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A06C89961ABA30DF00751EC8 /* LaunchScreen.xib */; };
 		A06C89A41ABA30DF00751EC8 /* BarcodeScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06C89A31ABA30DF00751EC8 /* BarcodeScannerTests.swift */; };
+		A06C89B01ABA5FAC00751EC8 /* DiscoveredBarCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06C89AF1ABA5FAC00751EC8 /* DiscoveredBarCodeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		A06C899D1ABA30DF00751EC8 /* BarcodeScannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BarcodeScannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A06C89A21ABA30DF00751EC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A06C89A31ABA30DF00751EC8 /* BarcodeScannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerTests.swift; sourceTree = "<group>"; };
+		A06C89AF1ABA5FAC00751EC8 /* DiscoveredBarCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveredBarCodeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				A06C89941ABA30DF00751EC8 /* Images.xcassets */,
 				A06C89961ABA30DF00751EC8 /* LaunchScreen.xib */,
 				A06C898B1ABA30DF00751EC8 /* Supporting Files */,
+				A06C89AF1ABA5FAC00751EC8 /* DiscoveredBarCodeView.swift */,
 			);
 			path = BarcodeScanner;
 			sourceTree = "<group>";
@@ -161,9 +164,11 @@
 				TargetAttributes = {
 					A06C89871ABA30DF00751EC8 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 2XMHLN479A;
 					};
 					A06C899C1ABA30DF00751EC8 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 2XMHLN479A;
 						TestTargetID = A06C89871ABA30DF00751EC8;
 					};
 				};
@@ -214,6 +219,7 @@
 			files = (
 				A06C89901ABA30DF00751EC8 /* ViewController.swift in Sources */,
 				A06C898E1ABA30DF00751EC8 /* AppDelegate.swift in Sources */,
+				A06C89B01ABA5FAC00751EC8 /* DiscoveredBarCodeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +364,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -369,6 +377,7 @@
 				INFOPLIST_FILE = BarcodeScannerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BarcodeScanner.app/BarcodeScanner";
 			};
 			name = Debug;
@@ -377,6 +386,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -384,6 +395,7 @@
 				INFOPLIST_FILE = BarcodeScannerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BarcodeScanner.app/BarcodeScanner";
 			};
 			name = Release;
